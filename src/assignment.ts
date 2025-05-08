@@ -68,3 +68,22 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
   }
   return mostExpensive;
 }
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getDayType(day: Day): string {
+  if (day === Day.Friday) {
+    return "Weekend";
+  } else {
+    return "Weekday";
+  }
+}
+console.log(getDayType(Day.Friday));
